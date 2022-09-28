@@ -206,6 +206,40 @@ export const ContentDescription = styled.div`
 
 `
 
+export const CastContent = styled.div`
+  margin-top: 3rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cast {
+    display: grid;
+    height: 30rem;
+    overflow-y: scroll;
+    padding: 1rem;
+    gap: 1rem;
+   
+    @media(min-width: 468px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media(min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media(min-width: 1200px) {
+      height: 45rem;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+`
+
 export const ContainerVideo = styled.div`
 display: flex;
 justify-content: center;
@@ -221,7 +255,7 @@ position: relative;
     }
   }
   
-  `
+`
 
 export const Video = styled.div`
 z-index: 10;

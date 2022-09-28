@@ -118,5 +118,14 @@ export const PersonContent = styled.div`
       font-weight: 900;
       font-size: 1.5rem;
     }
+
+    p{
+      position: absolute;
+      bottom: 2rem;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #b2b2b2;
+    }
   }
 `

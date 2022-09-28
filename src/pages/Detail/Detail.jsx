@@ -1,7 +1,7 @@
 import { APIkey } from '../../config/key'
 import { useEffect } from 'react'
 import { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import ReactPlayer from 'react-player'
 
 import moment from 'moment'
@@ -14,12 +14,15 @@ import {
   ContentDescription,
   ContentDetail,
   ContainerVideo,
-  Video
+  Video,
+  CastContent
 } from './styles'
-
+import { Cast } from '../../components/Cast/Casts'
+import { Persons } from '../Persons/Persons'
 
 export function Detail() {
   const [detail, setDetail] = useState()
+  const [showMore, setShowMore] = useState(false)
   const { id, type } = useParams()
 
   function formatDate(detail) {
@@ -57,7 +60,7 @@ export function Detail() {
           />
         </div>
         <ContentDetail>
-          <div className='poster'>
+          <div className="poster">
             <img
               src={`https://image.tmdb.org/t/p/original${
                 detail ? detail.poster_path : ''
@@ -139,17 +142,26 @@ export function Detail() {
               <h3>Sinopse</h3>
               <p>{detail ? detail.overview : ''}</p>
             </div>
+
           </ContentDescription>
         </ContentDetail>
+
+            <CastContent>
+              <h3>Elenco Principal</h3>     
+              <div className='cast'>
+                <Cast id={id} type={type} />
+              </div>
+            </CastContent>
+            
       </ContainerDescription>
 
       <ContainerVideo>
-        <div className='imageVideo'>
-        <img
-          src={`https://image.tmdb.org/t/p/original${
-            detail ? detail.backdrop_path : ''
-          }`}
-        />
+        <div className="imageVideo">
+          <img
+            src={`https://image.tmdb.org/t/p/original${
+              detail ? detail.backdrop_path : ''
+            }`}
+          />
         </div>
 
         <Video>
