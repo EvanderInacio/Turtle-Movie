@@ -1,9 +1,9 @@
 import { APIkey } from '../../config/key'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import moment from "moment"
-import "moment/locale/pt-br"
-moment.locale("pt-br")
+import moment from 'moment'
+import 'moment/locale/pt-br'
+moment.locale('pt-br')
 
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
@@ -15,14 +15,14 @@ export function Slider() {
 
   function formatDate(trending) {
     let data = ''
-    if(trending.release_date !== undefined) {
+    if (trending.release_date !== undefined) {
       data = moment(trending.release_date).format('DD/MM/YYYY')
     } else if (trending.first_air_date !== undefined) {
       data = moment(trending.first_air_date).format('DD/MM/YYYY')
     }
     return data
   }
-  
+
   useEffect(() => {
     getData()
   }, [])
@@ -46,9 +46,12 @@ export function Slider() {
     >
       {popularMovies.map(trending => {
         return (
-          <Link key={trending.id} to={`detail/${trending.media_type}/${trending.id}`}>
+          <Link
+            key={trending.id}
+            to={`detail/${trending.media_type}/${trending.id}`}
+          >
             <Image>
-              <img 
+              <img
                 src={`https://image.tmdb.org/t/p/original${
                   trending && trending.backdrop_path
                 }`}
@@ -59,9 +62,9 @@ export function Slider() {
               <h1>{trending ? trending.title : ''}</h1>
               <div>
                 <article>
-                   <span>
+                  <span>
                     <FaRegCalendarAlt /> {trending ? formatDate(trending) : ''}
-                   </span>
+                  </span>
                   <span>
                     <FaStar />
                     {trending ? trending.vote_average.toFixed(1) : ''}

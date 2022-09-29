@@ -3,8 +3,8 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import styled from 'styled-components'
 import { Title } from '../Home/styles'
+import styled from 'styled-components'
 
 export function Persons() {
   const [person, setPerson] = useState()
@@ -24,17 +24,13 @@ export function Persons() {
   return (
     <Container>
       <Title>
-          <span>Pessoas</span> 
-        </Title>
+        <span>Pessoas</span>
+      </Title>
       <ContainerPerson>
-        
         {person &&
           person.map(person => {
             return (
-              <Link
-                key={person.id}
-                to={`/person/${person.id}`}
-              >
+              <Link key={person.id} to={`/person/${person.id}`}>
                 <PersonContent>
                   <img
                     src={`https://image.tmdb.org/t/p/original${
@@ -53,7 +49,6 @@ export function Persons() {
     </Container>
   )
 }
-
 
 export const Container = styled.div`
   display: flex;
@@ -119,7 +114,7 @@ export const PersonContent = styled.div`
       font-size: 1.5rem;
     }
 
-    p{
+    p {
       position: absolute;
       bottom: 2rem;
       font-style: italic;

@@ -3,17 +3,11 @@ import { Link } from 'react-router-dom'
 import { Logo, Nav, NavMenu, MobileIcon, NavContent } from './styles'
 import logo from '/logo.png'
 
-import {
-  FaFilm,
-  FaHome,
-  FaRandom,
-  FaTv,
-  FaSearch
-} from 'react-icons/fa'
+import { FaFilm, FaHome, FaRandom, FaTv, FaSearch } from 'react-icons/fa'
 import { BsFillPersonFill } from 'react-icons/bs'
 import { List, X } from 'phosphor-react'
 
- export function Header() {
+export function Header() {
   const [click, setClick] = useState(false)
 
   const handleOpen = () => {
@@ -52,7 +46,7 @@ import { List, X } from 'phosphor-react'
             <Link to="/persons">
               <BsFillPersonFill />
               <span>Pessoas</span>
-            </Link> 
+            </Link>
 
             <Link to="/random">
               <FaRandom />
@@ -64,7 +58,6 @@ import { List, X } from 'phosphor-react'
               <span>Pesquisar</span>
             </Link>
           </ul>
-      
         </NavMenu>
       </NavContent>
     </Nav>

@@ -17,8 +17,9 @@ import {
   Video,
   CastContent
 } from './styles'
-import { Cast } from '../../components/Cast/Casts'
+import { Cast } from '../../components/Cast'
 import { Persons } from '../Persons/Persons'
+import { Recommendations } from '../../components/Recommendations'
 
 export function Detail() {
   const [detail, setDetail] = useState()
@@ -125,6 +126,30 @@ export function Detail() {
                       })}
                   </span>
                 </p>
+                <p>
+                  Idioma Oficial:{' '}
+                  <span>
+                    {detail?.original_language
+                      ? detail?.original_language
+                      : 'Não informado'}
+                  </span>
+                </p>
+                <p>
+                  Pais:{' '}
+                  <span>
+                    {detail?.production_countries[0]?.name
+                      ? detail?.production_countries[0]?.name
+                      : 'Não informado'}
+                  </span>
+                </p>
+                <p>
+                  Título Oficial:{' '}
+                  <span>
+                    {detail?.original_title
+                      ? detail?.original_title
+                      : 'Não informado'}
+                  </span>
+                </p>
               </div>
 
               <div className="genres">
@@ -142,17 +167,15 @@ export function Detail() {
               <h3>Sinopse</h3>
               <p>{detail ? detail.overview : ''}</p>
             </div>
-
           </ContentDescription>
         </ContentDetail>
 
-            <CastContent>
-              <h3>Elenco Principal</h3>     
-              <div className='cast'>
-                <Cast id={id} type={type} />
-              </div>
-            </CastContent>
-            
+        <CastContent>
+          <h3>Elenco Principal</h3>
+          <div className="cast">
+            <Cast id={id} type={type} />
+          </div>
+        </CastContent>
       </ContainerDescription>
 
       <ContainerVideo>
@@ -175,6 +198,10 @@ export function Detail() {
           ></ReactPlayer>
         </Video>
       </ContainerVideo>
+
+      <div>
+        <Recommendations id={id} type={type} />
+      </div>
     </>
   )
 }

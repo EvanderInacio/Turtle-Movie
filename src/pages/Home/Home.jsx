@@ -21,7 +21,7 @@ export function Home() {
   return (
     <>
       <Slider />
-       <Section>
+      <Section>
         <Title>
           <span>Filmes e Series</span> em alta da semana
         </Title>
@@ -29,7 +29,10 @@ export function Home() {
           {trendingMovies.length > 0 &&
             trendingMovies.map(movie => {
               return (
-                <Link key={movie.id} to={`/detail/${movie.media_type}/${movie.id}`}>
+                <Link
+                  key={movie.id}
+                  to={`/detail/${movie.media_type}/${movie.id}`}
+                >
                   <Cards movie={movie} />
                 </Link>
               )

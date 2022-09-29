@@ -4,7 +4,14 @@ import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Cards } from '../../components/Card'
 
-import { ContainerPerson, Description, Info, Bio, PersonMovies, PersonDetail } from './styles'
+import {
+  ContainerPerson,
+  Description,
+  Info,
+  Bio,
+  PersonMovies,
+  PersonDetail
+} from './styles'
 
 export function Person() {
   const [person, setPerson] = useState()
@@ -74,35 +81,40 @@ export function Person() {
               )
             : ''}
 
-            {person ? person.also_known_as.length > 0 && (
-              <article>
-                <h4>Também conhecido(a) como</h4>
-                <p>{person.also_known_as.map((item, index) => {
-                  return <p key={index}>{item}</p>
-                })}</p>
-              </article>
-            ) : ''}
+          {person
+            ? person.also_known_as.length > 0 && (
+                <article>
+                  <h4>Também conhecido(a) como</h4>
+                  <p>
+                    {person.also_known_as.map((item, index) => {
+                      return <p key={index}>{item}</p>
+                    })}
+                  </p>
+                </article>
+              )
+            : ''}
         </Info>
       </Description>
 
       <Bio>
-        <h2 className='title'>{person ? person.name : ''}</h2>
-        <p className='description'>{person ? person.biography : ''}</p>
+        <h2 className="title">{person ? person.name : ''}</h2>
+        <p className="description">{person ? person.biography : ''}</p>
 
         <PersonDetail>
           <h3>Conhecido(a) por</h3>
           <PersonMovies>
-          <div className='cards'>
-          {person ?
-         person.combined_credits.cast.length > 0 && 
-         person.combined_credits.cast.map(movie => {
-          return (
-            <Link key={person.id} to={`/detail/movie/${movie.id}`}>
-              <Cards movie={movie} />
-            </Link>
-          )
-         }) : ''} 
-          </div>
+            <div className="cards">
+              {person
+                ? person.combined_credits.cast.length > 0 &&
+                  person.combined_credits.cast.map(movie => {
+                    return (
+                      <Link key={person.id} to={`/detail/movie/${movie.id}`}>
+                        <Cards movie={movie} />
+                      </Link>
+                    )
+                  })
+                : ''}
+            </div>
           </PersonMovies>
         </PersonDetail>
       </Bio>

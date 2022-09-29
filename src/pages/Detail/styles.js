@@ -150,6 +150,7 @@ export const ContentDescription = styled.div`
   .status{
     display: flex;
     flex-direction: column;
+    gap: .3rem;
     margin-bottom: 2rem;
     font-size: 1rem;
 
