@@ -188,7 +188,6 @@ export function Detail() {
         </div>
 
         <Video>
-          <h2>Trailer</h2>
           <ReactPlayer
             url={`https://www.youtube.com/watch?v=${detail?.videos.results[0]?.key}`}
             width="100%"

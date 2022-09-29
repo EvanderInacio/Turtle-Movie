@@ -246,6 +246,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 position: relative;
+margin-top: 3rem;
 
 .imageVideo{
   img {
@@ -261,12 +262,6 @@ position: relative;
 export const Video = styled.div`
 z-index: 10;
 position: absolute;
-
-h2 {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  color: #00f7df;
-}
 
 @media(min-width: 468px){
   width: 25rem;
