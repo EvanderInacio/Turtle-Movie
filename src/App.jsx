@@ -7,6 +7,7 @@ import { Series } from "./pages/Series/Series"
 import { Persons } from "./pages/Persons/Persons"
 import { Detail } from "./pages/Detail/Detail"
 import { Person } from "./pages/Persons/Person"
+import { Footer } from "./components/Footer"
 
 import GlobalStyle from './styles/global'
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/detail/:type/:id" element={<Detail />} />
         <Route path="/person/:id" element={<Person />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }
