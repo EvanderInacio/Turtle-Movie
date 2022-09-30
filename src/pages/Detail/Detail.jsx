@@ -1,7 +1,7 @@
 import { APIkey } from '../../config/key'
 import { useEffect } from 'react'
 import { useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import ReactPlayer from 'react-player'
 
 import moment from 'moment'
@@ -18,12 +18,10 @@ import {
   CastContent
 } from './styles'
 import { Cast } from '../../components/Cast'
-import { Persons } from '../Persons/Persons'
 import { Recommendations } from '../../components/Recommendations'
 
 export function Detail() {
   const [detail, setDetail] = useState()
-  const [showMore, setShowMore] = useState(false)
   const { id, type } = useParams()
 
   function formatDate(detail) {
@@ -37,6 +35,7 @@ export function Detail() {
   }
 
   useEffect(() => {
+    window.scrollTo(0,0)
     getData()
   }, [type])
 

@@ -6,17 +6,24 @@ import { Link } from 'react-router-dom'
 import { Slider } from '../../components/Slider'
 import { Cards } from '../../components/Card'
 import { Section, Title, CardContainer } from './styles'
+import { CustomPagination } from '../../components/Pagination'
 
 export function Home() {
+  const [page, setPage] = useState(1)
   const [trendingMovies, setTrendingMovies] = useState([])
 
   useEffect(() => {
+    window.scroll(0, 0)
+    getFetch()
+  }, [page])
+
+  const getFetch = () => {
     fetch(
-      `https://api.themoviedb.org/3/trending/all/week?api_key=${APIkey}&language=pt-BR`
+      `https://api.themoviedb.org/3/trending/all/week?api_key=${APIkey}&language=pt-BR&page=${page}`
     )
-      .then(res => res.json())
+      .then(response => response.json())
       .then(data => setTrendingMovies(data.results))
-  }, [])
+  }
 
   return (
     <>
@@ -38,6 +45,8 @@ export function Home() {
               )
             })}
         </CardContainer>
+
+        <CustomPagination setPage={setPage} />
       </Section>
     </>
   )

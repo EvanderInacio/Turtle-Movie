@@ -10,6 +10,14 @@ const GlobalStyle = createGlobalStyle`
   margin: 0;
 }
 
+.MuiButtonBase-root {
+  color: #f9f9f9!important;
+}
+
+.MuiButtonBase-root:hover {
+  color: #00f7df!important;
+}
+
 a {
   color: inherit;
   text-decoration: none;

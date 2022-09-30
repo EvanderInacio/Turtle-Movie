@@ -2,24 +2,29 @@ import { APIkey } from '../../config/key'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
+import { CustomPagination } from '../../components/Pagination'
 
 import { Title } from '../Home/styles'
 import styled from 'styled-components'
 
 export function Persons() {
   const [person, setPerson] = useState()
+  const [numOfPages, setNumOfPages] = useState();
+  const [page, setPage] = useState(1);
+
+  
+  const persons = async () => {
+    const { data } = await axios.get(`https://api.themoviedb.org/3/person/popular?api_key=${APIkey}&language=en-US&page=${page}`)
+    setPerson(data.results)
+    setNumOfPages(data.total_results)
+  }
 
   useEffect(() => {
-    People()
-  }, [])
+    window.scroll(0, 0);
+    persons()
+  }, [page])
 
-  const People = () => {
-    fetch(
-      `https://api.themoviedb.org/3/person/popular?api_key=${APIkey}&language=en-US`
-    )
-      .then(response => response.json())
-      .then(data => setPerson(data.results))
-  }
 
   return (
     <Container>
@@ -46,6 +51,10 @@ export function Persons() {
             )
           })}
       </ContainerPerson>
+
+      {numOfPages > 1 && (
+          <CustomPagination setPage={setPage} numOfPages={numOfPages} />
+        )}
     </Container>
   )
 }
