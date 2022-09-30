@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { CustomPagination } from '../../components/Pagination'
 
-import { Title } from '../Home/styles'
+import { Banner } from '../Movies/styles'
+import Poster from '../../assets/persons.jpg'
 import styled from 'styled-components'
 
 export function Persons() {
@@ -28,9 +29,10 @@ export function Persons() {
 
   return (
     <Container>
-      <Title>
-        <span>Pessoas</span>
-      </Title>
+      <Banner>
+          <img src={Poster} alt="Poster" />
+          <h3>Pessoas</h3>
+        </Banner>
       <ContainerPerson>
         {person &&
           person.map(person => {

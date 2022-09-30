@@ -1,18 +1,19 @@
 import { FooterContainer } from './styles'
 
+import { FaGithub } from 'react-icons/fa'
+
 export function Footer() {
   return (
     <FooterContainer>
-      <h4>
-        Feito por{' '}
+      <h5>
+        &copy; 2022 {' '}
         <a href="https://www.evanderinacio.com/" target="_blank">
-          Evander Inácio
+         Evander Inácio
         </a>
-      </h4>
+      </h5>
       <p>
-        Veja o código no{' '}
         <a href="https://github.com/EvanderInacio/Turtle-Movie" target="_blank">
-          Github
+          <FaGithub />
         </a>
       </p>
     </FooterContainer>

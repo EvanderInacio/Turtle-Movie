@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom'
 import { Cards } from '../../components/Card'
 import { Section, Title, CardContainer } from '../Home/styles'
 import { CustomPagination } from '../../components/Pagination'
+import { Banner } from '../Movies/styles'
+import Poster from '../../assets/poster.webp'
 
 export function Series() {
   const [trendingMovies, setTrendingMovies] = useState([])
@@ -26,9 +28,10 @@ export function Series() {
   return (
     <>
       <Section>
-        <Title>
-          <span>Series</span>
-        </Title>
+      <Banner>
+          <img src={Poster} alt="Poster" />
+          <h3>Series</h3>
+        </Banner>
         <CardContainer>
           {trendingMovies.length > 0 &&
             trendingMovies.map(movie => {

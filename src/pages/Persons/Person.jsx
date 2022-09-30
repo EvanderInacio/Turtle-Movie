@@ -18,13 +18,13 @@ export function Person() {
   const { id, type } = useParams()
 
   useEffect(() => {
-    window.scrollTo(0,0)
+    window.scrollTo(0, 0)
     fetch(
       `https://api.themoviedb.org/3/person/${id}?api_key=${APIkey}&language=pt-BR&append_to_response=combined_credits`
     )
       .then(response => response.json())
       .then(data => setPerson(data))
-  }, [type])
+  }, [])
 
   return (
     <ContainerPerson>
@@ -109,7 +109,10 @@ export function Person() {
                 ? person.combined_credits.cast.length > 0 &&
                   person.combined_credits.cast.map(movie => {
                     return (
-                      <Link key={person.id} to={`/detail/movie/${movie.id}`}>
+                      <Link
+                        key={movie.id}
+                        to={`/detail/${movie.media_type}/${movie.id}`}
+                      >
                         <Cards movie={movie} />
                       </Link>
                     )
