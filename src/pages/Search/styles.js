@@ -6,7 +6,7 @@ export const ContainerSearch = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 100%;
+
 `
 
 export const ContentSearch = styled.div`

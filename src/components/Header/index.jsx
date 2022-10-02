@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Logo, Nav, NavMenu, MobileIcon, NavContent } from './styles'
 import logo from '/logo.png'
 
-import { FaFilm, FaHome, FaRandom, FaTv, FaSearch } from 'react-icons/fa'
+import { FaFilm, FaHome, FaTv, FaSearch, FaUndo } from 'react-icons/fa'
 import { BsFillPersonFill } from 'react-icons/bs'
 import { List, X } from 'phosphor-react'
 
@@ -48,9 +48,9 @@ export function Header() {
               <span>Pessoas</span>
             </Link>
 
-            <Link to="/random">
-              <FaRandom />
-              <span>Random</span>
+            <Link to="/upcoming">
+              <FaUndo />
+              <span>Em Breve</span>
             </Link>
 
             <Link to="/search">

@@ -41,5 +41,15 @@ export const Banner = styled.div`
   } 
   
 }
+`
+
+export const Title = styled.div`
+  margin-bottom: 2rem;
+  
+  text-align: center;
+  
+  @media(min-width: 994px) {
+    font-size: 1.8rem;
+  }
 
 `

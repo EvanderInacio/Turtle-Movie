@@ -8,10 +8,10 @@ import { Persons } from "./pages/Persons/Persons"
 import { Detail } from "./pages/Detail/Detail"
 import { Person } from "./pages/Persons/Person"
 import { Footer } from "./components/Footer"
+import { Search } from "./pages/Search/Search"
+import { Upcoming } from "./pages/Upcoming/Upcoming"
 
 import GlobalStyle from './styles/global'
-import { Search } from "./pages/Search/Search"
-
 
 function App() {
   return (
@@ -24,6 +24,7 @@ function App() {
         <Route path="/series" element={<Series />} />
         <Route path="/persons" element={<Persons />} />
         <Route path="/search" element={<Search />} />
+        <Route path="/upcoming" element={<Upcoming />} />
         <Route path="/detail/:type/:id" element={<Detail />} />
         <Route path="/person/:id" element={<Person />} />
       </Routes>
