@@ -10,6 +10,7 @@ import { Person } from "./pages/Persons/Person"
 import { Footer } from "./components/Footer"
 
 import GlobalStyle from './styles/global'
+import { Search } from "./pages/Search/Search"
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/movies" element={<Movies />} />
         <Route path="/series" element={<Series />} />
         <Route path="/persons" element={<Persons />} />
+        <Route path="/search" element={<Search />} />
         <Route path="/detail/:type/:id" element={<Detail />} />
         <Route path="/person/:id" element={<Person />} />
       </Routes>

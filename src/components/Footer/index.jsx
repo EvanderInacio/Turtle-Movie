@@ -4,7 +4,8 @@ import { FaGithub } from 'react-icons/fa'
 
 export function Footer() {
   return (
-    <FooterContainer>
+    <footer style={{position: 'relative', marginTop: '15rem'}}>
+      <FooterContainer>
       <h5>
         &copy; 2022 {' '}
         <a href="https://www.evanderinacio.com/" target="_blank">
@@ -17,5 +18,6 @@ export function Footer() {
         </a>
       </p>
     </FooterContainer>
+    </footer>
   )
 }

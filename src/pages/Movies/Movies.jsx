@@ -34,7 +34,7 @@ export function Movies() {
           <img src={Poster} alt="Poster" />
           <h3>Filmes</h3>
         </Banner>
-
+        
         <CardContainer>
           {trendingMovies.length > 0 &&
             trendingMovies.map(movie => {
