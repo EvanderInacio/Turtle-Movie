@@ -4,7 +4,7 @@ import { FaGithub } from 'react-icons/fa'
 
 export function Footer() {
   return (
-    <footer style={{position: 'relative', marginTop: '15rem'}}>
+    <footer>
       <FooterContainer>
       <h5>
         &copy; 2022 {' '}

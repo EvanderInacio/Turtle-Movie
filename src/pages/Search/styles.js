@@ -6,6 +6,7 @@ export const ContainerSearch = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  min-height: 100vh;
 
 `
 
