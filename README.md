@@ -33,11 +33,11 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 | Series | Pessoas |
 | --- | --- |
-| <img src="https://github.com/EvanderInacio/Turtle-Movie/blob/main/src/assets/series-popular.png?raw=true" width='300px' /> | <img src="https://github.com/EvanderInacio/Turtle-Movie/blob/main/src/assets/person-popular.png?raw=true"  width='270px' /> | 
+| <img src="https://github.com/EvanderInacio/Turtle-Movie/blob/main/src/assets/series-popular.png?raw=true" /> | <img src="https://github.com/EvanderInacio/Turtle-Movie/blob/main/src/assets/person-popular.png?raw=true"  /> | 
 
 | Página Detalhes Filmes| Página Detalhes Pessoa|
 | --- | --- |
-| <img src="https://github.com/EvanderInacio/Turtle-Movie/blob/main/src/assets/detail.png?raw=true" width='250px' /> | <img src="https://github.com/EvanderInacio/Turtle-Movie/blob/main/src/assets/detail-person.png?raw=true" width='300px'/>  |
+| <img src="https://github.com/EvanderInacio/Turtle-Movie/blob/main/src/assets/detail.png?raw=true" /> | <img src="https://github.com/EvanderInacio/Turtle-Movie/blob/main/src/assets/detail-person.png?raw=true" />  |
 
 ## 🔗 Links
 
