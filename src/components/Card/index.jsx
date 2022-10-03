@@ -44,7 +44,7 @@ export function Cards({ movie }) {
         <Card style={{ width: '200px', marginLeft: '1rem' }}>
           <img
             src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-            alt="poster"
+            alt={movie.name}
           />
           <CardContent>
             <div>

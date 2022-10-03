@@ -9,7 +9,7 @@ import { CustomPagination } from '../../components/Pagination'
 import { Title } from '../Movies/styles'
 
 export function UpcomingMovie() {
-  const [trendingMovies, setTrendingMovies] = useState([])
+  const [movie, setMovie] = useState([])
   const [numOfPages, setNumOfPages] = useState()
   const [page, setPage] = useState(1)
 
@@ -17,7 +17,7 @@ export function UpcomingMovie() {
     const { data } = await axios.get(
       `https://api.themoviedb.org/3/movie/upcoming?api_key=${APIkey}&language=pt-BR&page=${page}`
     )
-    setTrendingMovies(data.results)
+    setMovie(data.results)
     setNumOfPages(data.total_pages)
   }
 
@@ -36,8 +36,8 @@ export function UpcomingMovie() {
       </Title>
         
         <CardContainer>
-          {trendingMovies.length > 0 &&
-            trendingMovies.map(movie => {
+          { movie.length > 0 &&
+            movie.map(movie => {
               return (
                 <Link to={`/detail/movie/${movie.id}`}>
                   <Cards key={movie.id} movie={movie} />
