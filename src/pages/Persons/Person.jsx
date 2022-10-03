@@ -33,7 +33,7 @@ export function Person() {
           src={`https://image.tmdb.org/t/p/original${
             person ? person.profile_path : ''
           }`}
-          alt={person.name}
+          alt="Pessoa"
         />
 
         <Info>
