@@ -52,7 +52,7 @@ export function Cards({ movie }) {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1500);
   }, []);
 
   return (
@@ -64,7 +64,7 @@ export function Cards({ movie }) {
       ) : (
         <Link key={movie.id} to={`/detail/${movie.media_type}/${movie.id}`}>
           <Card style={{ width: "200px" }}>
-            <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.name} />
+            <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.name} />
             <CardContent>
               <div>
                 <h2>{movie.title}</h2>
