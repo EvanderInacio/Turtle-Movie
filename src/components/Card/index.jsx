@@ -52,7 +52,7 @@ export function Cards({ movie }) {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 1500);
+    }, 1200);
   }, []);
 
   return (
