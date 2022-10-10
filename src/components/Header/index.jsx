@@ -5,6 +5,8 @@ import logo from '/logo.png'
 
 import { FaFilm, FaHome, FaTv, FaSearch, FaUndo } from 'react-icons/fa'
 import { BsFillPersonFill } from 'react-icons/bs'
+import { MdFavorite } from 'react-icons/md'
+
 import { List, X } from 'phosphor-react'
 
 export function Header() {
@@ -51,6 +53,11 @@ export function Header() {
             <Link to="/upcoming">
               <FaUndo />
               <span>Em Breve</span>
+            </Link>
+
+            <Link to="/favorites">
+              <MdFavorite />
+              <span>Favoritos</span>
             </Link>
 
             <Link to="/search">
