@@ -102,20 +102,22 @@ export const ButtonFav = styled.button`
   position: relative;
   top: 0;
   right: 0;
-  padding: 0.5rem;
-  border: none;
-  background: var(--logo-color);
-  color: #fef501;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--logo-color);
+  border-radius: 5px;
+  background: transparent;
+  color: #fff;
   font-size: 1rem;
   cursor: pointer;
   transition: color 0.2s;
 
   &:hover {
-    color: #fff;
+    background-color: var(--logo-color);
+    color: #fef501;
   }
 
   &.active {
-    color: #fff;
+    color: #555550;
   }
 `;
 
@@ -125,5 +127,5 @@ export const Main = styled.div`
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 1rem;
+  padding: 1rem 0.6rem;
 `;

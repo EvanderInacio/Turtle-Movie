@@ -56,33 +56,36 @@ export function Cards({ movie }) {
   }, []);
 
   return (
-    <Main>
+ 
+      <Main>
       {isLoading ? (
         <Card>
           <Loading />
         </Card>
       ) : (
-        <Link key={movie.id} to={`/detail/${movie.media_type}/${movie.id}`}>
-          <Card style={{ width: "200px" }}>
-            <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.name} />
-            <CardContent>
-              <div>
-                <h2>{movie.title}</h2>
-                <h2>{movie.name}</h2>
-              </div>
-              <article>
-                {movie.media_type ? type(movie) : formatDate(movie)}
-                <span>
-                  <FaStar />
-                  {movie.vote_average?.toFixed(1)}
-                </span>
-              </article>
-              <p>{movie.overview?.slice(0, 100) + "..."}</p>
-            </CardContent>
-          </Card>
-        </Link>
+        <Card style={{ width: '200px', marginLeft: '1rem' }}>
+        <img
+          src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+          alt={movie.name}
+        />
+        <CardContent>
+          <div>
+            <h2>{movie.title}</h2>
+            <h2>{movie.name}</h2>
+          </div>
+          <article>
+            {movie.media_type ? type(movie) : formatDate(movie)}
+            <span>
+              <FaStar />
+              {movie.vote_average.toFixed(1)}
+            </span>
+          </article>
+          <p>{movie.overview.slice(0, 100) + '...'}</p>
+        </CardContent>
+        </Card>
       )}
       <ButtonFav onClick={handleFavorite}>{favorite ? "Remover dos favoritos" : "Adicionar aos favoritos"}</ButtonFav>
-    </Main>
+      </Main>
+  
   );
 }

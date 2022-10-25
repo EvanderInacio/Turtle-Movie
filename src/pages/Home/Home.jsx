@@ -33,7 +33,14 @@ export function Home() {
         <CardContainer>
           {trendingMovies.length > 0 &&
             trendingMovies.map((movie) => {
-              return <Cards movie={movie} />;
+              return (
+                <Link
+                  key={movie.id}
+                  to={`/detail/${movie.media_type}/${movie.id}`}
+                >
+                  <Cards movie={movie} />
+                </Link>
+              );
             })}
         </CardContainer>
 
