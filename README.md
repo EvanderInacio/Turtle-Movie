@@ -3,9 +3,9 @@
 </h1>
 
 <p align="center">
-  <img alt="Github Top Language" src="https://img.shields.io/github/languages/top/EvanderInacio/Portfolio?color=2662D9">
-  <img alt="Github Language Count" src="https://img.shields.io/github/languages/count/EvanderInacio/Portfolio?color=2662D9">
-  <img alt="Repository Size" src="https://img.shields.io/github/repo-size/EvanderInacio/Portfolio?color=2662D9">
+  <img alt="Github Top Language" src="https://img.shields.io/github/languages/top/EvanderInacio/Turtle-Movie?color=2662D9">
+  <img alt="Github Language Count" src="https://img.shields.io/github/languages/count/EvanderInacio/Turtle-Movie?color=2662D9">
+  <img alt="Repository Size" src="https://img.shields.io/github/repo-size/EvanderInacio/Turtle-Movie?color=2662D9">
 </p>
 
 <br>
