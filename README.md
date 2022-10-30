@@ -2,6 +2,12 @@
   Turtle Movie 🎥
 </h1>
 
+<p align="center">
+  <img alt="Github Top Language" src="https://img.shields.io/github/languages/top/EvanderInacio/Portfolio?color=2662D9">
+  <img alt="Github Language Count" src="https://img.shields.io/github/languages/count/EvanderInacio/Portfolio?color=2662D9">
+  <img alt="Repository Size" src="https://img.shields.io/github/repo-size/EvanderInacio/Portfolio?color=2662D9">
+</p>
+
 <br>
 
 ![Resultado final do projeto](https://github.com/EvanderInacio/Turtle-Movie/blob/main/src/assets/turtle-movie.png?raw=true)
